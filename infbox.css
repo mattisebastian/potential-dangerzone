@@ -1,0 +1,16 @@
+body {
+    background-color: lightblue;
+}
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+
+ul#Navigation li {
+
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+
+  
+}
