@@ -9,6 +9,9 @@ h1 {
     margin-left: 20px;
 }
 
+/* |-------------------- HEADER & NAV --------------------| */
+
+
 nav {
 	background-color: lightgrey;
 	height: 80px; width: 1170px;
@@ -25,6 +28,29 @@ nav ul {
 	margin: 0;
 	padding: 0;
 }
+
+
+/* the logo, complete with imageswap on hover */
+
+nav #img-container {
+	width:150px;height:80px;
+	background-image: url('Logo/infbox_logo-green.png');
+	-webkit-transition: background 0.4s ease-in-out;
+	padding-right: 15px;
+	/* otherwise the image will be repeated in the padding :)*/
+	background-repeat: no-repeat;
+}
+
+nav #img-container:hover {
+			transition: background 0.4s ease-in-out; /* vendorless fallback */
+         -o-transition: background 0.4s ease-in-out; /* opera */
+        -ms-transition: background 0.4s ease-in-out /* IE 10 betas, not needed in final build. */
+       -moz-transition: background 0.4s ease-in-out; /* Firefox */
+    -webkit-transition: background 0.4s ease-in-out; /*safari and chrome */
+	background-image: url('Logo/infbox_logo-grey.png');
+}
+
+
 /* these are the top level menu boxes*/
 
 nav ul li {
@@ -32,19 +58,20 @@ nav ul li {
 	display: block;
 	position: relative;
 	float: left;
+	-webkit-transition: background-color 0.4s ease-in-out; /*safari and chrome */
 }
 
-/* the logo, complete with imageswap on hover */
 
-nav #img-container {
-	width:150px;height:80px;
-	background: url('Logo/infbox_logo-green.png');
+/* make the background-color of the menu items fade nicely */
+
+nav ul li:hover {  
+            transition: background-color 0.4s ease-in; /* vendorless fallback */
+         -o-transition: background-color 0.4s ease-in; /* opera */
+        -ms-transition: background-color 0.4s ease-in; /* IE 10 betas, not needed in final build. */
+       -moz-transition: background-color 0.4s ease-in; /* Firefox */
+    -webkit-transition: background-color 0.4s ease-in-out; /*safari and chrome */
+	background-color: #666666;
 }
-
-nav #img-container:hover {
-	background: url('Logo/infbox_logo-grey.png');
-}
-
 
 /* class for making half the menu float right */
 
@@ -67,32 +94,22 @@ nav ul li a, img {
 	white-space: nowrap;
 	height: 80px;
 	line-height: 98px;
-
+	/* makes the color fade-out on mouse leave */
+	-webkit-transition: color 0.4s ease-in-out; /*safari and chrome */
 }
 
 /* invert the color of the links on hover */
 
 nav ul li a:hover {
 	color: #F0F0F0;
-
-}
-
-/* make the background-color fade nicely */
-
-nav ul li:hover {  
-            transition: background-color 0.3s ease-in; /* vendorless fallback */
-         -o-transition: background-color 0.5s ease-in; /* opera */
-        -ms-transition: background-color 0.5s ease-in; /* IE 10 betas, not needed in final build. */
-       -moz-transition: background-color 0.5s ease-in; /* Firefox */
-    -webkit-transition: background-color 0.3s ease-in; /*safari and chrome */
-	background-color: #666666;
+	-webkit-transition: color 0.4s ease-in-out; /*safari and chrome */
 }
 
 /* this is the logo container */
 
-nav ul li:first-child {
+/* nav ul li:first-child {
 	padding: 0px 25px 0px 2px
-}
+} */
 
 nav ul li:first-child:hover {
 	background-color: lightgrey;
@@ -101,5 +118,17 @@ nav ul li:first-child:hover {
 /* settings for the font-awesome font */
 
 i {
-	padding: 0px 4px 0px 4px;
+	padding: 0px 7px 0px 7px;
+}
+
+/* |-------------------- CONTENT --------------------| */
+
+section p:firstchild, p:nth-child(2) {
+display: inline;
+float: left;
+}
+
+section p: p:nth-child(3) {
+display: inline;
+float: right;
 }

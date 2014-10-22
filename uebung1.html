@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="infbox.css">
-	<link rel="stylesheet" href="font-awesome-4.2.0\css\font-awesome.min.css">
-  </head>
-<body>
+	<head>
+		<link rel="stylesheet" type="text/css" href="infbox.css">
+		<link rel="stylesheet" href="font-awesome-4.2.0\css\font-awesome.min.css">
+	</head>
+	<body>
+		<header>
+			<nav>
+			  <ul id="menu-nav">
+				<!-- top level menu items with simple mouse hover-->
+				<li><div id="img-container"></div>
+				<li><a href="overview.htm"><i class="fa fa-th-large fa-lg"></i>Overview</a></li>
+				<li><a href="details.htm"><i class="fa fa-th-list fa-lg"></i>Details</a></li>
+				<li><a href="settings.htm">Settings</a></li>
+				<!-- top level menu items with submenus-->
+				<li class="menu-nav-right"> <a href="">Register</a>
+				  <ul>
+					<li>Register form here</li>
+				  </ul>
+				</li>
+				<li class="menu-nav-right"> <a href="">Login</a></li>
+				<li class="menu-nav-right"> <a href="">User</a></li>
+			  </ul>
+			</nav>
+		</header>
+		
+		<!-- TODO: Paragraphs in spans umwandeln -->
+		
+		<section>
+			<h1>Your files in detail...</h1>
+			<p>Number of entries per page:<span>10</span><span> | </span><span>20</span><span> | </span><span>50</span><span> | </span><span>100</span></p>
+			<p>Show/Hide: <span>Size</span><span> | </span><span>Type</span><span> | </span><span>Creation</span>
+			<p>Page: <span>1</span><span> | </span><span>2</span><span> | </span><span>3
+			</span>
+		</section>
+		
+		<footer>
+		</footer>
 
-<nav>
-  <ul id="menu-nav">
-    <!-- top level menu items with simple mouse hover-->
-    <li><div id="img-container"></div>
-    <li><a href="overview.htm"><i class="fa fa-th-large"></i>Overview</a></li>
-    <li><a href="details.htm"><i class="fa fa-th-list"></i>Details</a></li>
-    <li><a href="settings.htm">Settings</a></li>
-    <!-- top level menu items with submenus-->
-    <li class="menu-nav-right"> <a href="">Register</a>
-      <ul>
-        <li>Register form here</li>
-      </ul>
-    </li>
-    <li class="menu-nav-right"> <a href="">Login</a></li>
-    <li class="menu-nav-right"> <a href="">User</a></li>
-  </ul>
-</nav>
-
-
-
-
-</body>
+	</body>
 </html>
