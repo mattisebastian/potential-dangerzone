@@ -1,19 +1,88 @@
 body {
-    background-color: lightblue;
+    background-color: #F0F0F0;
+    width: 1170px;
+    margin: 0 auto;
+	padding: 0;
 }
 h1 {
     color: navy;
     margin-left: 20px;
 }
 
-ul#menu-nav li {
+nav {
+	background-color: lightgrey;
+	height: 80px; width: 1170px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+nav ul {
+	font-family: Arial, Verdana;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+/* these are the top level menu boxes*/
+nav ul li {
+	height: 80px;
+	display: block;
+	position: relative;
+	float: left;
+}
+
+.menu-nav-right {
+	float: right;
+}
+
+nav li ul{
+	display: none;
+}
+
+/* these are the top level menu anchors*/
+nav ul li a, img {
+	display: block;
+	text-decoration: none;
+	padding: 0px 15px 0px 15px;
+	color: darkgrey;
+	margin-left: 1px;
+	white-space: nowrap;
+	height: 80px;
+	line-height: 98px;
+
+}
+
+nav ul li a:hover {
+	color: #F0F0F0;
+
+}
+
+nav ul li:hover {
+	background-color: #666666
+}
+
+nav ul li img:hover {
+
+}
+
+nav #img-container {
+	width:150px;height:80px;
+	background: url('Logo/infbox_logo-green.png')
+}
+
+nav #img-container:hover {
+	background: url('Logo/infbox_logo-grey.png')
+}
+
+
+/*ul#menu-nav li {
   
 list-style-type: none;
 display: inline;
 margin: 0.4em; padding: 0;
 float: left;
 
-  
+  */
 }
 
 /*
