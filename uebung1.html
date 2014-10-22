@@ -3,6 +3,10 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="infbox.css">
 		<link rel="stylesheet" href="font-awesome-4.2.0\css\font-awesome.min.css">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+
 	</head>
 	<body>
 		<header>
@@ -14,25 +18,55 @@
 				<li><a href="details.htm"><i class="fa fa-th-list fa-lg"></i>Details</a></li>
 				<li><a href="settings.htm">Settings</a></li>
 				<!-- top level menu items with submenus-->
-				<li class="menu-nav-right"> <a href="">Register</a>
-				  <ul>
-					<li>Register form here</li>
-				  </ul>
-				</li>
-				<li class="menu-nav-right"> <a href="">Login</a></li>
+
+        <!-- these have to be reversed in order because of their float property -->
 				<li class="menu-nav-right"> <a href="">User</a></li>
+				<li class="menu-nav-right"> <a href="">Login</a></li>
+        <li class="menu-nav-right"> <a href="">Register</a>
+         <div id="login-content">
+            <form action="#" method="POST" id="login-form">
+    
+                <fieldset>
+                    <p>
+                        <label for="first-name">First name</label><br/>
+                        <input type="text" id="login-username" class="round full-width-input" autofocus="">
+                    </p>
+                    <p>
+                        <label for="last-name">Last name</label><br/>
+                        <input type="text" id="" class="round full-width-input">
+                    </p>
+                    <p>
+                        <label for="login-birthday">Birtday</label><br/>
+                        <input type="date" id="" class="round full-width-input" autofocus="">
+                    </p>
+                    <p>
+                        <label for="login-username">Your username</label><br/>
+                        <input type="text" class="round full-width-input">
+                    </p>
+                     <p>
+                        <label for="login-password">Your password</label><br/>
+                        <input type="password" id="login-password" class="round full-width-input">
+                    </p>
+                </fieldset>
+          </form>
+          </div>
+        </li>
+				
 			  </ul>
 			</nav>
 		</header>
-		
-		<!-- TODO: Paragraphs in spans umwandeln -->
-		
+
 		<section>
 			<h1>Your files in detail...</h1>
-			<p>Number of entries per page:<span>10</span><span> | </span><span>20</span><span> | </span><span>50</span><span> | </span><span>100</span></p>
-			<p>Show/Hide: <span>Size</span><span> | </span><span>Type</span><span> | </span><span>Creation</span>
-			<p>Page: <span>1</span><span> | </span><span>2</span><span> | </span><span>3
-			</span>
+			<span>
+          Number of entries per page:<a href="">10</a> | <a>20</a> | <a>50</a> | <a>100</a>
+      </span>
+			<span>
+          Show/Hide: <a>Size</a> | <a>Type</a> | <a>Creation</a>
+      </span>
+			<span class="menu-nav-right">
+          Page: <a>1</a> | <a>2</a> | <a>3</a>
+      </span>
 		</section>
 		
 		<footer>

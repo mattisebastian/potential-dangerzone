@@ -1,3 +1,19 @@
+* {
+	font-family: 'Ubuntu', sans-serif;
+	line-height: 145%;
+}
+
+/* Dropdown menu verstecken und bei hover anzeigen - manchmal buggy und tauch ohne hover auf */
+
+nav ul li div#login-content {
+	visibility: hidden;
+}
+
+nav ul li:hover div#login-content {
+	visibility: visible;
+
+}
+
 body {
     background-color: #F0F0F0;
     width: 1170px;
@@ -5,8 +21,10 @@ body {
 	padding: 0;
 }
 h1 {
-    color: navy;
-    margin-left: 20px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    line-height: 145%;
+    padding-top: 20px;
+
 }
 
 /* |-------------------- HEADER & NAV --------------------| */
@@ -27,6 +45,8 @@ nav ul {
 	font-size: 14px;
 	margin: 0;
 	padding: 0;
+	/* for orienting the submenu */
+	position: relative;
 }
 
 
@@ -49,7 +69,6 @@ nav #img-container:hover {
     -webkit-transition: background 0.4s ease-in-out; /*safari and chrome */
 	background-image: url('Logo/infbox_logo-grey.png');
 }
-
 
 /* these are the top level menu boxes*/
 
@@ -79,9 +98,6 @@ nav ul li:hover {
 	float: right;
 }
 
-nav li ul{
-	display: none;
-}
 
 /* these are the top level menu anchors*/
 
@@ -90,7 +106,7 @@ nav ul li a, img {
 	text-decoration: none;
 	padding: 0px 15px 0px 15px;
 	color: darkgrey;
-	margin-left: 1px;
+	/*margin-left: 1px;*/
 	white-space: nowrap;
 	height: 80px;
 	line-height: 98px;
@@ -121,14 +137,34 @@ i {
 	padding: 0px 7px 0px 7px;
 }
 
-/* |-------------------- CONTENT --------------------| */
+nav ul li form {
+	position: absolute;
+	/* dirty fix for the margin/padding of the form */
+	right: -2px;
+	color: #AFB5B8;
 
-section p:firstchild, p:nth-child(2) {
-display: inline;
-float: left;
 }
 
-section p: p:nth-child(3) {
-display: inline;
-float: right;
+/* style for the input forms */
+
+label{
+    display: inline;
+    float: left;
+    clear: left;
+    text-align: right;
+}
+input {
+  display: inline-block;
+  float: left;
+}
+
+
+
+
+
+
+/* |-------------------- CONTENT --------------------| */
+
+section span:nth-child(3)  {
+	padding: 0px 10px 0px 10px
 }
