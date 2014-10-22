@@ -17,6 +17,8 @@ nav {
 	text-align: center;
 }
 
+/* the top level list */
+
 nav ul {
 	font-family: Arial, Verdana;
 	font-size: 14px;
@@ -24,12 +26,27 @@ nav ul {
 	padding: 0;
 }
 /* these are the top level menu boxes*/
+
 nav ul li {
 	height: 80px;
 	display: block;
 	position: relative;
 	float: left;
 }
+
+/* the logo, complete with imageswap on hover */
+
+nav #img-container {
+	width:150px;height:80px;
+	background: url('Logo/infbox_logo-green.png');
+}
+
+nav #img-container:hover {
+	background: url('Logo/infbox_logo-grey.png');
+}
+
+
+/* class for making half the menu float right */
 
 .menu-nav-right {
 	float: right;
@@ -40,6 +57,7 @@ nav li ul{
 }
 
 /* these are the top level menu anchors*/
+
 nav ul li a, img {
 	display: block;
 	text-decoration: none;
@@ -52,42 +70,36 @@ nav ul li a, img {
 
 }
 
+/* invert the color of the links on hover */
+
 nav ul li a:hover {
 	color: #F0F0F0;
 
 }
 
-nav ul li:hover {
-	background-color: #666666
+/* make the background-color fade nicely */
+
+nav ul li:hover {  
+            transition: background-color 0.3s ease-in; /* vendorless fallback */
+         -o-transition: background-color 0.5s ease-in; /* opera */
+        -ms-transition: background-color 0.5s ease-in; /* IE 10 betas, not needed in final build. */
+       -moz-transition: background-color 0.5s ease-in; /* Firefox */
+    -webkit-transition: background-color 0.3s ease-in; /*safari and chrome */
+	background-color: #666666;
 }
 
-nav ul li img:hover {
+/* this is the logo container */
 
+nav ul li:first-child {
+	padding: 0px 25px 0px 2px
 }
 
-nav #img-container {
-	width:150px;height:80px;
-	background: url('Logo/infbox_logo-green.png')
+nav ul li:first-child:hover {
+	background-color: lightgrey;
 }
 
-nav #img-container:hover {
-	background: url('Logo/infbox_logo-grey.png')
+/* settings for the font-awesome font */
+
+i {
+	padding: 0px 4px 0px 4px;
 }
-
-
-/*ul#menu-nav li {
-  
-list-style-type: none;
-display: inline;
-margin: 0.4em; padding: 0;
-float: left;
-
-  */
-}
-
-/*
-
-#menu-nav-right {
-  float: right;
-  
-*/
